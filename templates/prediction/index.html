@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img href="{% url 'home' %}" src="{% static 'logo.jpg' %}" alt="Logo" width="80">
+        </div>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'medlibrary' %}">Med Library</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1 class = "heading">EARLY DETECTION,</h1>
+    <h1 class = "heading1">BETTER PROTECTION!</h1>
+    <ul>
+        <button class="b1" type="submit"><a href="predict"><b>Do I have Kidney disease? - Let's Predict</b></a></button>
+        <button class="b2" type="submit"><a href=""><b>Do I have Heart disease ? - Let's Predict</b></a></button>
+        <button class="b3" type="submit"><a href=""><b>Do I have Liver disease ? - Let's Predict</b></a></button>
+        <button class="b4" type="submit"><a href=""><b>Do I have Lung disease ? - Let's Predict</b></a></button>
+    </ul>
+</body>
+</html>

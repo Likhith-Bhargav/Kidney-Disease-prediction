@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'medlib.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img href="{% url 'home' %}" src="{% static 'logo.jpg' %}" alt="Logo" width="80">
+        </div>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'medlibrary' %}">Med Library</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+    <div class="box">
+        <h1>Blood pressure</h1>
+    <p>
+        <ul>
+        Blood pressure is the force exerted by circulating blood on the walls of the body's arteries. It's measured in millimeters of mercury (mmHg) and recorded with two numbers: systolic pressure (the pressure when the heart beats) over diastolic pressure (the pressure when the heart is at rest between beats).
+        <br>
+        A normal blood pressure level is generally considered to be around 120/80 mmHg. The systolic number should be less than 120, and the diastolic number should be less than 80. Levels above this range can indicate hypertension (high blood pressure), while levels below might indicate hypotension (low blood pressure).
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Specific Gravity</h1>
+    <p>
+    <ul>
+        <li>
+        Specific gravity is a measure of the density of a substance compared to the density of water. It indicates the concentration of solutes in a liquid, often used in medical and scientific contexts to assess bodily fluids like urine.
+        </li>
+        <br>
+        <li>
+        For urine, the normal specific gravity range is between 1.005 and 1.030. Values within this range suggest normal kidney function and hydration status, while values outside this range can indicate various health conditions such as dehydration, kidney disease, or urinary tract infections.
+        </li>
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Albumin</h1>
+    <p>
+        <ul>
+        Albumin is a protein made by the liver, which plays a crucial role in maintaining oncotic pressure (the pressure exerted by proteins in the blood plasma) and transporting various substances, such as hormones, vitamins, and drugs, throughout the body. It also helps in tissue growth and repair.
+        <br>
+        The normal range for albumin levels in the blood is typically between 3.5 and 5.0 grams per deciliter (g/dL). Levels outside this range can indicate various health issues, such as liver disease, kidney disease, or malnutrition.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Sugar</h1>
+    <p>
+        <ul>
+        Blood sugar, or blood glucose, is the main sugar found in the blood and is the primary source of energy for the body's cells. It comes from the foods you eat and is regulated by insulin, a hormone produced by the pancreas.
+        <br>
+        Normal fasting blood sugar levels are typically between 70 and 99 milligrams per deciliter (mg/dL). Levels between 100 and 125 mg/dL indicate prediabetes, while levels of 126 mg/dL or higher suggest diabetes. Maintaining normal blood sugar levels is crucial for overall health and preventing complications associated with diabetes.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Red Blood Cells</h1>
+    <p>
+        <ul>
+        Red blood cells (RBCs), or erythrocytes, are cells in the blood that carry oxygen from the lungs to the rest of the body and return carbon dioxide from the body to the lungs to be exhaled. They contain hemoglobin, a protein that binds to oxygen, enabling this crucial transport.
+        <br>
+        Normal RBC levels vary by age and sex:
+        For men: 4.7 to 6.1 million cells per microliter (mcL) of blood.
+        For women: 4.2 to 5.4 million cells per mcL.
+        For children: 4.1 to 5.5 million cells per mcL.
+        Abnormal RBC counts can indicate conditions such as anemia (low RBC count) or polycythemia (high RBC count), affecting the body's ability to transport oxygen efficiently.
+        </ul>
+    </ul></p>
+
+    </div>
+
+    <div class="box">
+    <h1>Pus Cells</h1>
+    <p>
+        <ul>
+        Pus cells, also known as leukocytes or white blood cells (WBCs), are a crucial part of the body's immune response. They help to fight off infections by engulfing and digesting pathogens and other foreign substances. Pus cells are typically found in areas of infection or inflammation.
+        <br>
+        In a healthy individual, the presence of pus cells in bodily fluids like urine or wound discharge indicates an ongoing infection or inflammatory response. The normal levels of pus cells can vary depending on the type of fluid and the specific context of the infection. In urine, for example, a normal range might be less than 5 pus cells per high-power field under a microscope. Elevated levels beyond this range often indicate infection or inflammation that requires medical attention.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Pus Cell Clumps</h1>
+    <p>
+        <ul>
+        Pus cell clumps refer to aggregates or clusters of white blood cells (leukocytes) that form in response to infection or inflammation. These clumps are often observed in samples of bodily fluids such as urine or wound exudate under a microscope.
+        <br>
+        Normal levels of pus cell clumps can vary depending on the specific context and the type of fluid being examined. In general, the presence of pus cell clumps indicates a localized immune response to an infection. Clinically, the interpretation of pus cell clumps is often part of diagnosing and monitoring the severity of infections or inflammatory conditions. Elevated or abnormal levels of pus cell clumps may suggest a more significant infection or a compromised immune response, requiring further investigation and treatment.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Bacteria</h1>
+    <p>
+        <ul>
+        Bacteria are single-celled microorganisms that can exist in various environments, including the human body. While some bacteria are beneficial or harmless, others can cause infections and disease. In medical contexts, bacteria are often assessed in bodily fluids or tissues to diagnose infections.
+        <br>
+        Normal levels of bacteria in the body depend on the location and the specific environment. 
+        <br>
+        For example:
+        <br>
+        In the urinary tract: Normally, urine is sterile (no bacteria present). The presence of bacteria in urine, especially at significant levels, can indicate a urinary tract infection (UTI).
+        <br>
+        In the gut: The gut contains a complex microbiota, including many types of bacteria that contribute to digestion and overall health. The balance of bacteria in the gut is essential for proper functioning and immune system regulation.
+        <br>
+        when bacteria levels exceed normal thresholds in places where they are typically absent or at low levels, it can indicate infection or microbial imbalance. Monitoring bacterial levels and identifying specific types of bacteria through cultures and tests help guide medical treatment and management of infections.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Blood Glucose Random</h1>
+    <p>
+        <ul>
+        Blood glucose random (or random blood sugar) refers to the measurement of glucose levels in the blood at any time of the day, regardless of when the last meal was consumed. This test is often used to screen for diabetes or to monitor blood sugar levels in individuals with diabetes.
+        <br>
+        Normal random blood glucose levels typically range between 70 and 125 milligrams per deciliter (mg/dL). Levels higher than 200 mg/dL may indicate diabetes, especially if accompanied by symptoms such as increased thirst, frequent urination, and fatigue. However, specific diagnostic criteria for diabetes rely on repeated measurements and additional tests, such as fasting blood glucose or oral glucose tolerance tests, for confirmation.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Blood Urea</h1>
+    <p>
+        <ul>
+        Blood urea refers to the concentration of urea nitrogen in the blood, which is a waste product generated from the breakdown of proteins in the liver. Urea is filtered out of the blood by the kidneys and excreted in urine. Measuring blood urea levels helps assess kidney function and overall health status.
+        <br>
+        Normal blood urea levels typically range between 7 and 20 milligrams per deciliter (mg/dL) in adults. Higher than normal levels can indicate kidney dysfunction or failure, dehydration, or conditions that increase protein breakdown (such as high-protein diets or gastrointestinal bleeding). Lower than normal levels may indicate liver disease, malnutrition, or overhydration.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Serum Creatinine</h1>
+    <p>
+        <ul>
+        Serum creatinine is a waste product generated by the muscles from creatine phosphate, a substance used to supply energy to muscles. It's filtered out of the blood by the kidneys and excreted in urine. Measuring serum creatinine levels is an important indicator of kidney function.
+        <br>
+        Normal serum creatinine levels vary based on age, sex, and muscle mass, but generally range between:
+        <br>
+        0.6 to 1.2 milligrams per deciliter (mg/dL) in adult males,
+        <br>
+        0.5 to 1.1 mg/dL in adult females.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Sodium</h1>
+    <p>
+        <ul>
+        Sodium is an essential electrolyte and mineral that plays a critical role in maintaining fluid balance, nerve function, and muscle contraction in the body. It's primarily found in extracellular fluids, such as blood plasma and interstitial fluid.
+        <br>
+        Normal sodium levels in the blood typically range between 135 and 145 milliequivalents per liter (mEq/L). These levels are carefully regulated by the kidneys and hormones like aldosterone to ensure proper cellular function and fluid balance.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Potassium</h1>
+    <p>
+        <ul>
+        Potassium is an essential mineral and electrolyte that plays a vital role in maintaining proper muscle function, nerve transmission, and heart rhythm. It's primarily found inside cells, with a small percentage circulating in the bloodstream.
+        <br>
+        Normal potassium levels in the blood typically range between 3.5 and 5.0 milliequivalents per liter (mEq/L). These levels are tightly regulated by the kidneys, hormones (such as aldosterone), and dietary intake.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Hemoglobin</h1>
+    <p>
+        <ul>
+        Hemoglobin (Hb) is a protein found in red blood cells (RBCs) that carries oxygen from the lungs to tissues throughout the body and returns carbon dioxide from the tissues back to the lungs. It consists of heme, which contains iron, and globin, a protein chain.
+        <br>
+        Normal hemoglobin levels vary by age, sex, and other factors:
+        <br>
+        For adult males: Typically, normal hemoglobin levels range from 13.8 to 17.2 grams per deciliter (g/dL).
+        <br>
+        For adult females: Typically, normal hemoglobin levels range from 12.1 to 15.1 g/dL.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+
+    <h1>Packed Cell Volume</h1>
+    <p>
+        <ul>
+        Packed Cell Volume (PCV), also known as hematocrit (Hct), is a measure of the volume percentage of red blood cells (RBCs) in whole blood. It indicates the proportion of blood volume that is occupied by RBCs.
+        <br>
+        Normal levels of PCV typically range:
+        <br>
+        For adult males: 40% to 54%.
+        <br>
+        For adult females: 37% to 47%.
+        <br>
+        PCV levels can vary with factors such as age, sex, altitude, and health conditions. Low PCV levels may indicate anemia, blood loss, or certain nutritional deficiencies. High PCV levels can occur due to dehydration, chronic lung disease, or certain kidney disorders.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+
+    <h1>White Blood Cell Count</h1>
+    <p>
+        <ul>
+        White blood cell (WBC) count refers to the total number of white blood cells in a microliter (µL) of blood. White blood cells are a crucial part of the immune system, defending the body against infections and foreign invaders.
+        <br>
+        Normal WBC counts typically range between 4,000 and 11,000 cells per microliter (µL) of blood. The specific range can vary slightly depending on age, sex, and individual health factors.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+
+    <h1>Red Blood Cell Count</h1>
+    <p>
+        <ul>
+        Red blood cell (RBC) count refers to the number of red blood cells present in a microliter (µL) of blood. These cells are responsible for carrying oxygen from the lungs to tissues throughout the body and transporting carbon dioxide back to the lungs for exhalation.
+        <br>
+        Normal red blood cell counts typically range between:
+        <br>
+        For adult males: 4.7 to 6.1 million cells per microliter (µL).
+        <br>
+        For adult females: 4.2 to 5.4 million cells per µL.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+
+    <h1>Hypertension</h1>
+    <p>
+        <ul>
+        Hypertension, commonly known as high blood pressure, is a condition characterized by elevated pressure exerted by blood against the walls of arteries. It's typically measured with two numbers: systolic pressure (when the heart beats) over diastolic pressure (when the heart is at rest between beats).
+        <br>
+        Normal blood pressure levels are generally considered to be below 120/80 mmHg. Hypertension is diagnosed when blood pressure consistently measures 130/80 mmHg or higher. It's a significant risk factor for cardiovascular diseases such as heart attack, stroke, and kidney disease.
+        <br>
+        Hypertension can be managed through lifestyle changes (such as diet and exercise), medications prescribed by healthcare providers, and regular monitoring to prevent complications and maintain overall health.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+
+    <h1>Diabetes Mellitus</h1>
+    <p>
+        <ul>
+        Diabetes mellitus is a chronic metabolic disorder characterized by high blood sugar levels (hyperglycemia) over a prolonged period. It occurs due to either insufficient production of insulin by the pancreas or the body's inability to use insulin effectively (insulin resistance).
+        <br>
+        Normal blood sugar levels vary depending on the specific test:
+        <br>
+        Fasting blood sugar: Typically less than 100 milligrams per deciliter (mg/dL) after an overnight fast.
+        <br>
+        Random blood sugar: Usually less than 140 mg/dL, measured at any time of the day regardless of when the last meal was consumed.
+        <br>
+        Hemoglobin A1c (HbA1c): Typically less than 5.7% reflects normal blood glucose control over the past 2-3 months.
+        <br>
+        In diabetes mellitus, blood sugar levels are persistently elevated. This can lead to various complications affecting the eyes, kidneys, nerves, heart, and blood vessels if not properly managed. Treatment focuses on maintaining blood sugar levels within target ranges through lifestyle modifications (diet, exercise), medications (including insulin therapy), and regular monitoring to prevent complications and maintain overall health.
+    </ul>
+    </p>
+   
+    </div>
+    <div class="box">
+
+    <h1>Coronary Artery Disease</h1>
+    <p>
+        <ul>
+        Coronary artery disease (CAD), also known as coronary heart disease or ischemic heart disease, is a condition characterized by the narrowing or blockage of the coronary arteries, which supply oxygen-rich blood to the heart muscle. This narrowing is typically due to the buildup of fatty deposits (plaque) on the inner walls of the arteries, a process called atherosclerosis.
+        <br>
+        CAD is diagnosed based on symptoms, risk factors, and diagnostic tests such as:
+        <br>
+        Angiography: Imaging tests that visualize the coronary arteries to detect blockages.
+        <br>
+        Electrocardiogram (ECG or EKG): Records electrical signals of the heart to detect abnormal rhythms and signs of damage.
+        <br>
+        Exercise stress test: Measures the heart's response to physical exertion to assess for signs of reduced blood flow to the heart.
+        <br>
+        CAD can lead to chest pain (angina), heart attack (myocardial infarction), heart failure, and arrhythmias. Management includes lifestyle changes (diet, exercise, smoking cessation), medications (such as statins and blood thinners), and sometimes procedures (like angioplasty or bypass surgery) to restore blood flow to the heart muscle and reduce the risk of complications. Regular monitoring and management of risk factors like cholesterol levels, blood pressure, and blood sugar are crucial in preventing and managing coronary artery disease.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+
+    <h1>Appetite</h1>
+    <p>
+        <ul>
+        Appetite refers to the desire or urge to eat food, driven by physiological and psychological factors. It's regulated by complex interactions between hormones, neurotransmitters, and the brain's appetite control centers.
+        <br>
+        Factors that influence appetite include:
+        <br>
+        Hunger: Physiological signals from the digestive system signaling the need for energy and nutrients.
+        <br>
+        Satiety: The feeling of fullness and satisfaction after eating, regulated by hormones like leptin and ghrelin.
+        <br>
+        Psychological factors: Mood, emotions, stress, and social cues can also influence appetite.
+        <br>
+        A healthy appetite generally involves a balanced response to hunger cues, leading to adequate food intake to meet nutritional needs without overeating or undereating. Disruptions in appetite, such as loss of appetite (anorexia) or increased appetite (polyphagia), can be indicators of underlying medical conditions, hormonal imbalances, psychological disorders, or medication side effects.
+        <br>
+        Maintaining a balanced diet, regular physical activity, managing stress levels, and addressing any underlying health issues are important for maintaining a healthy appetite and overall well-being.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+
+    <h1>Pedal Edema</h1>
+    <p>
+        <ul>
+        Pedal edema refers to swelling (edema) that occurs in the feet and ankles. It is often caused by an accumulation of fluid in the tissues due to various factors, such as:
+        <br>
+        Gravity: Fluids can accumulate in the lower extremities due to gravity, especially after prolonged standing or sitting.
+        <br>
+        Venous Insufficiency: Conditions that impair blood flow back to the heart, such as varicose veins or deep vein thrombosis (DVT), can lead to pedal edema.
+        <br>
+        Heart Failure: Reduced heart function can cause fluid buildup in the legs and feet.
+        <br>
+        Kidney Disease: Impaired kidney function can lead to fluid retention and edema.
+        <br>
+        Pregnancy: Hormonal changes and increased pressure on blood vessels can cause fluid retention and pedal edema.
+        <br>
+        Medications: Some medications, such as calcium channel blockers and nonsteroidal anti-inflammatory drugs (NSAIDs), can cause fluid retention.
+        <br>
+        Treatment of pedal edema depends on identifying and addressing the underlying cause. This may include lifestyle modifications (such as reducing salt intake and elevating the legs), wearing compression stockings, medications to reduce fluid retention, and managing any underlying medical conditions contributing to the edema.
+    </ul>
+    </p>
+    </div>
+
+    <div class="box">
+    <h1>Aanemia</h1>
+    <p>
+        <ul>
+        Anemia is a condition characterized by a deficiency in the number of red blood cells (RBCs) or a deficiency in hemoglobin, the protein in RBCs that carries oxygen throughout the body. This results in reduced oxygen delivery to tissues and organs, leading to symptoms such as fatigue, weakness, pale skin, and shortness of breath.
+        <br>
+        Normal levels of hemoglobin vary by age, sex, and pregnancy status, but typically range:
+        <br>
+        For adult males: 13.8 to 17.2 grams per deciliter (g/dL).
+        <br>
+        For adult females: 12.1 to 15.1 g/dL.
+        <br>
+        Anemia can be caused by various factors:
+        <br>
+        Iron deficiency: Most common cause, due to inadequate dietary intake, blood loss (such as from heavy menstrual periods or gastrointestinal bleeding), or poor absorption.
+        <br>
+        Vitamin deficiency: Such as vitamin B12 or folate deficiency.
+        <br>
+        Chronic diseases: Such as chronic kidney disease or inflammatory conditions.
+        <br>
+        Genetic disorders: Such as thalassemia or sickle cell disease.
+        <br>
+        Diagnosis of anemia involves blood tests to measure hemoglobin levels and RBC count. Treatment depends on the underlying cause but may include dietary supplements (iron, vitamin B12, or folate), medications, treating the underlying medical condition, or in severe cases, blood transfusions.
+    </ul>
+    </p>
+    </div>
+    </div>
+    </body>
+</html>

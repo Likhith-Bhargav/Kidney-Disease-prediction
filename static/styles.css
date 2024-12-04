@@ -1,0 +1,197 @@
+.heading
+{
+    color: rgb(189 227 255);
+    position: absolute;
+    top: 28%;
+    padding-left: 2%;
+    margin-bottom: 10%;
+    font-family: NONE;
+    font-size: 45px;
+}
+.heading1
+{
+    color: rgb(189 227 255);
+    position: absolute;
+    top: 36%;
+    padding-left: 6%;
+    margin-bottom: 10%;
+    font-family: NONE;
+    font-size: 45px;
+}
+body
+{
+    background-image: url(home2.jpeg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+button.b1 {
+    font-family: math;
+    background-color: rgb(3, 106, 183);
+    position: absolute;
+    border: none;
+    top: 55%;
+    left: 5%;
+    padding: 15px 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+}
+
+button.b2 {
+    font-family: math;
+    background-color: rgb(3, 106, 183);
+    position: absolute;
+    border: none;
+    top: 63%;
+    left: 5%;
+    padding: 15px 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+}
+
+button.b3 {
+    font-family: math;
+    background-color: rgb(3, 106, 183);
+    position: absolute;
+    border: none;
+    top: 71%;
+    left: 5%;
+    padding: 15px 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+}
+button.b4 {
+    font-family: math;
+    background-color: rgb(3, 106, 183);
+    position: absolute;
+    border: none;
+    top: 79%;
+    left: 5%;
+    padding: 15px 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+}
+
+
+button a {
+    color: rgb(193, 235, 251);
+    text-decoration: none; /* Remove underline */
+    display: block; /* Ensure the link takes up the entire button area */
+    position: relative; /* For positioning the pseudo-element */
+}
+
+button a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: white;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+button:hover {
+    background-color: #002d4c; 
+}
+
+button:hover a::after {
+    width: 100%;
+    left: 0;
+    background: white;
+}
+
+body
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #002d4c;
+    position: fixed;
+    width: 99%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    order: 1; /* Specify the order in flexbox */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: right;
+    order: 2; /* Specify the order in flexbox */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: white;
+}
+
+nav .logo img {
+    width: 60px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}

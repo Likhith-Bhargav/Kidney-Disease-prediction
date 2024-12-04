@@ -1,0 +1,161 @@
+nav {
+    background-color: #002a4d;
+    position: fixed;
+    width: 99%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    order: 1; /* Specify the order in flexbox */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: right;
+    order: 2; /* Specify the order in flexbox */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: white;
+}
+
+nav .logo img {
+    width: 60px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+h1 {
+    margin-top: 80px; /* Adjust margin-top to create space */
+}
+
+/* medlib.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #002a4d;
+}
+
+nav {
+    background-color: #002a4d;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.box {
+    background-color: rgb(189 227 255);
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(33.333% - 40px); /* 3 boxes per row */
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 2cm;
+}
+
+.box:hover{
+    background-color: #03295a;
+    transform: scale(1.05); /* Scale up on hover */
+    border-color: #3fd2b6;
+    color: #3fd2b6;
+
+}
+
+.box h1, .box p, .box h4 {
+    margin: 10px 0;
+    color: #0092ff;
+}
+.box h1, .box p, .box h4:hover
+{
+    color: #0092ff;
+}
+
+@media screen and (max-width: 768px) {
+    .box {
+        width: calc(50% - 40px); /* 2 boxes per row on small screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box {
+        width: calc(100% - 40px); /* 1 box per row on very small screens */
+    }
+}

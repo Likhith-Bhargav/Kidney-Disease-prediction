@@ -1,0 +1,144 @@
+/* Navbar Styles */
+nav {
+    background-color: #002d4c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    order: 1; /* Specify the order in flexbox */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: right;
+    order: 2; /* Specify the order in flexbox */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: white;
+}
+
+nav .logo img {
+    width: 60px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Conditional Body Background Colors */
+body.kidney-disease {
+    background-color: #ffe6e6; /* Light red */
+}
+
+body.no-kidney-disease {
+    background-color: #e6ffe6; /* Light green */
+}
+
+/* Text Colors */
+.red-text {
+    color: red;
+}
+
+.green-text {
+    color: rgb(0, 226, 0);
+}
+
+/* General Styles */
+h1, h2 {
+    text-align: center;
+    margin-top: 100px;
+    
+}
+h1{
+    color: #e6ffe6 ;
+}
+
+h2 {
+    margin-bottom: 30px;
+    margin-top: 60px;
+    font-size: -webkit-xxx-large;
+}
+
+body {
+    background-image: url(result1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h3 {
+    color: #ffffff;
+    position: absolute;
+    bottom: 0%;
+    margin: 400px;
+    margin-bottom: 0px;
+    background: rgba(6, 65, 135, 0.65);
+    font-size: 1rem;
+    font-family: math;
+    padding: 1.2%;
+}
+
+.retake-test-btn {
+    width: 8%;
+    padding: 12px;
+    margin-top: 75px; /* Adjust this value to move the button down */
+    border-color: #eaffff;
+    border-radius: 25px; /* Adjust the radius as desired */
+    font-size: 25px;
+    background-color: #eaffff;
+    color: #022e57;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block; /* Ensure it behaves like a block element */
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.retake-test-btn:hover {
+    background-color: #2e82ef;
+    transform: scale(1.05); /* Scale up on hover */
+    border-color: #3fd2b6;
+}

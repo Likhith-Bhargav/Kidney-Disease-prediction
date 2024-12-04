@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney disease prediction</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'diseasePrediction.css' %}">
+</head>
+<body>
+    <div class="heading-container">
+        <h1 class="heading" id="heading1">KNOW</h1>
+        <h1 class="heading" id="heading2">YOUR</h1>
+        <h2 class="heading" id="heading3">KIDNEY</h2>
+        <h1 class="heading" id="heading4">HEALTH...</h1>
+        <p id="para">A healthy outside starts from the inside!!</p>
+    </div>
+    <nav>
+        <div class="logo">
+            <a href="{% url 'home' %}"><img src="{% static 'logo.jpg' %}" alt="Logo" width="80"></a>
+        </div>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'medlibrary' %}">Med Library</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <form action="/predict" method="POST" onsubmit="showWaitMessage()">
+            {% csrf_token %}
+            <label for="field">Name</label>
+            <input type="text" id="name" name="name" step="any" placeholder="Enter your name" required >
+            <br>
+            <label for="field">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter age" required >
+            <br>
+            <label for="field">Blood Pressure</label>
+            <input type="number" id="bp" name="bp" step="any" placeholder="Enter diastolic number (normal range-80mm Hg) " required >
+            <br>
+            <label for="field">Specific Gravity</label>
+            <input type="number" id="sg" name="sg" step="any" placeholder="Enter specific gravity (normal range is 1.005-1.030) " required >
+            <br>
+            <label for="field">Albumin</label>
+            <input type="number" id="albumin" name="albumin" step="any" placeholder="Enter albumin level (normal range is 3.4-5.4 g/dL)" required >
+            <br>
+            <label for="field">Sugar</label>
+            <input type="number" id="sugar" name="sugar" step="any" placeholder="Enter sugar level (normal range is 3.9-5.6 mmol/L)" required >
+            <br>
+            <label for="field">Red Blood Cells</label>
+            <input type="number" id="rbc" name="rbc" min="0" max="1" step="1" placeholder="Enter 0 for abnormal, 1 for normal" required >
+            <br>
+            <label for="field">Pus Cell</label>
+            <input type="number" id="pc" name="pc" min="0" max="1" step="1" placeholder="Enter 0 for abnormal, 1 for normal" required >
+            <br>
+            <label for="field">Pus Cell Clumps</label>
+            <input type="number" id="pcc" name="pcc" min="0" max="1" step="1" placeholder="Enter 0 for not present, 1 for present" required >
+            <br>
+            <label for="field">Bacteria</label>
+            <input type="number" id="bacteria" name="bacteria" min="0" max="1" step="1" placeholder="Enter 0 for not present, 1 for present" required >
+            <br>
+            <label for="field">Blood Glucose Random</label>
+            <input type="number" id="bgr" name="bgr" step="any" placeholder="Enter BGR level (normal range is 72-108 mg/dL.)" required >
+            <br>
+            <label for="field">Blood Urea</label>
+            <input type="number" id="bu" name="bu" step="any" placeholder="Enter blood urea level (normal range is 7-20 mg/dL.)" required >
+            <br>
+            <label for="field">Serum Creatinine</label>
+            <input type="number" id="sc" name="sc" step="any" placeholder="Enter SC level (normal range is 0.7-1.3 mg/dL)" required >
+            <br>
+            <label for="field">Sodium</label>
+            <input type="number" id="sodium" name="sodium" step="any" placeholder="Enter sodium level (normal range is 35-145 mEq/L)" required >
+            <br>
+            <label for="field">Potassium</label>
+            <input type="number" id="potassium" name="potassium" step="any" placeholder="Enter potassium level (normal range is 3.5-5.5 mEq/L)" required >
+            <br>
+            <label for="field">Hemoglobin</label>
+            <input type="number" id="haemoglobin" name="haemoglobin" step="any" placeholder="Enter hemoglobin level (normal range is ≤ 11.5 g/dl)" required >
+            <br>
+            <label for="field">Packed Cell Volume</label>
+            <input type="number" id="pcv" name="pcv" step="any" placeholder="Enter PCV level (normal range is 35.5-44.9%.)" required >
+            <br>
+            <label for="field">White Blood Cell Count</label>
+            <input type="number" id="wbc" name="wbc" step="any" placeholder="Enter WBC count (4,500-11,000 WBC/microliter)" required >
+            <br>
+            <label for="field">Red Blood Cell Count</label>
+            <input type="number" id="rbc_count" name="rbc_count" step="any" placeholder="Enter RBC count (4.2-5.4 million cells/microliter)" required >
+            <br>
+            <label for="field">Hypertension</label>
+            <input type="number" id="hypertension" name="hypertension" min="0" max="1" step="1" placeholder="Enter 0 for no, 1 for yes" required >
+            <br>
+            <label for="field">Diabetes Mellitus</label>
+            <input type="number" id="dm" name="dm" min="0" max="1" step="1" placeholder="Enter 0 for no, 1 for yes" required >
+            <br>
+            <label for="field">Coronary Artery Disease</label>
+            <input type="number" id="cad" name="cad" min="0" max="1" step="1" placeholder="Enter 0 for no, 1 for yes" required >
+            <br>
+            <label for="field">Appetite</label>
+            <input type="number" id="appetite" name="appetite" min="0" max="1" step="1" placeholder="Enter 0 for good, 1 for poor" required >
+            <br>
+            <label for="field">Pedal Edema</label>
+            <input type="number" id="pe" name="pe" min="0" max="1" step="1" placeholder="Enter 0 for no, 1 for yes" required >
+            <br>
+            <label for="field">Anemia</label>
+            <input type="number" id="anemia" name="anemia" min="0" max="1" step="1" placeholder="Enter 0 for no, 1 for yes" required >
+            <br>
+            <button type="submit">Predict</button>
+            <p id="waitMessage" style="display:none;">Please wait, we are predicting your result...</p>
+        </form>
+    </div>
+    <script>
+        // Function to show the wait message
+        function showWaitMessage() {
+            document.getElementById('waitMessage').style.display = 'block';
+        }
+
+        // Hide the wait message when the page loads
+        window.onload = function() {
+            document.getElementById('waitMessage').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

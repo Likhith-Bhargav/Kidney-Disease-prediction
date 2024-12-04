@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kidney Disease Prediction - No</title>
+</head>
+<body>
+    <h1>Kidney Disease Prediction</h1>
+    <h2>Majority Prediction: No Kidney Disease</h2>
+    <ul>
+        {% for model, result in results.items %}
+            <li>{{ model }}: {{ result }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

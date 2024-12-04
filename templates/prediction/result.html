@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Results</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'result.css' %}">
+</head>
+<body class="{% if majority_prediction == 'Kidney Disease' %}kidney-disease{% else %}no-kidney-disease{% endif %}">
+    <nav>
+        <div class="logo">
+            <a href="{% url 'home' %}"><img src="{% static 'logo.jpg' %}" alt="Logo" width="80"></a>
+        </div>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'medlibrary' %}">Med Library</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>Prediction Results:</h1>
+    <h2 class="{% if majority_prediction == 'Kidney Disease' %}red-text{% else %}green-text{% endif %}">{{ majority_prediction }} Detected</h2>
+    <a href="predict" class="retake-test-btn">Retake Test</a>
+    <h3>
+        <p style="text-align: center; font-size: xx-large;">
+            <u>Advice From Health Professional</u>
+        </p>
+        <ul>
+            <li>Do adhere to a balanced diet low in sodium, potassium, and phosphorus, and stay well-hydrated.</li>
+            <li>Regularly monitor blood pressure and blood sugar levels, maintain a healthy weight through appropriate exercise, and take medications as prescribed.</li>
+            <li>Don't smoke, consume excessive alcohol, or use over-the-counter pain relievers without consulting your doctor, as these can worsen kidney function.</li>
+            <li>Avoid high-protein diets and be cautious with herbal supplements.</li>
+            <li>Regular check-ups and open communication with your healthcare team are vital for managing kidney health.</li>
+        </ul>
+    </h3>
+</body>
+</html>

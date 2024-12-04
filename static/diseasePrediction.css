@@ -1,0 +1,224 @@
+body {
+    background-image: url(kidney28.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-position-x: 0px;
+    background-position-y: 64px;
+    background-size: 100% 100%;
+}
+
+/* Reset default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Container styling */
+.container {
+    max-width: 600px;
+    margin: 150px 0 70px auto;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+}
+
+/* Form labels */
+form label {
+    flex-basis: 100%;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #68f5d7;
+}
+
+/* Form input fields */
+form input[type="text"],
+form input[type="number"],
+form input[type="submit"] {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #68f5d7;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #03295a;
+    color: #fff;
+}
+
+/* Submit button */
+form input[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    form input[type="text"],
+    form input[type="number"],
+    form input[type="submit"] {
+        width: 100%;
+    }
+}
+
+nav {
+    background-color: #002d4c;
+    position: fixed;
+    width: 99%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    order: 1; /* Specify the order in flexbox */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: right;
+    order: 2; /* Specify the order in flexbox */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: white;
+}
+
+nav .logo img {
+    width: 60px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+form button[type="submit"] {
+    width: 40%;
+    padding: 12px;
+    margin-top: 10px;
+    border-color: #3fd2b6;
+    border-radius: 20px; /* Adjust the radius as desired */
+    font-size: 16px;
+    background-color: #3fd2b6;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 60px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #03295a;
+    transform: scale(1.05); /* Scale up on hover */
+    border-color: #3fd2b6;
+}
+
+
+.heading-container {
+    position: absolute;
+    top: 14%;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.heading {
+    margin: 2%;
+    padding: 0;
+    font-size: 3rem;
+    color: #50debe;
+    font-family: initial;
+}
+#heading1 {
+    position: fixed;
+    left: 35px;
+}
+#heading2 {
+    position: fixed;
+    left: 215px;
+}
+#heading3 {
+    position: fixed;
+    left: 405px;
+    font-size: 4rem;
+    color: #90e5d2;
+    margin: 1%;
+}
+#heading4 {
+    position: fixed;
+    left: 665px;
+}
+#para
+{
+    color: #a4d0c6;
+    position: fixed;  
+    top: 88%;
+    left: 220px;
+    font-size: 2rem;
+    font-family: initial;
+}
+#waitMessage {
+    color: #ff0000; /* Red color for visibility */
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
